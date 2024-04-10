@@ -1,8 +1,6 @@
 input.onButtonPressed(Button.A, function () {
-    light_level = pins.analogReadPin(AnalogPin.P1)
-    ESP8266_IoT.publishMqttMessage(convertToText(light_level), "myhome/null/bedroom-light", ESP8266_IoT.QosList.Qos2)
+    ESP8266_IoT.publishMqttMessage(convertToText(randint(0, 10)), "myhome/null/bedroom-light", ESP8266_IoT.QosList.Qos2)
 })
-let light_level = 0
 basic.showNumber(0)
 ESP8266_IoT.initWIFI(SerialPin.P8, SerialPin.P12, BaudRate.BaudRate115200)
 ESP8266_IoT.connectWifi("", "")
