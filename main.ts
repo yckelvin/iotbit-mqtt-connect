@@ -21,4 +21,7 @@ convertToText(client_id),
 ESP8266_IoT.connectMQTT("10.30.1.61", 1884, false)
 basic.showNumber(2)
 OLED.init(128, 64)
-basic.showIcon(IconNames.Yes)
+basic.showNumber(3)
+if (ESP8266_IoT.isMqttBrokerConnected()) {
+    basic.showIcon(IconNames.Yes)
+}
