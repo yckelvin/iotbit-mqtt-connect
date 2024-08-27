@@ -1,6 +1,6 @@
 input.onButtonPressed(Button.A, function () {
     value = randint(0, 10)
-    ESP8266_IoT.publishMqttMessage(convertToText(value), "myhome/null/bedroom-light", ESP8266_IoT.QosList.Qos2)
+    ESP8266_IoT.publishMqttMessage(convertToText(value), "myhome/null/bedroom-light", ESP8266_IoT.QosList.Qos1)
     OLED.clear()
     OLED.writeString("Publish value: ")
     OLED.writeNumNewLine(value)
